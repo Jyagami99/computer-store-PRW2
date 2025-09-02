@@ -35,9 +35,9 @@ const SectionItem = ({ section, products }) => {
           marginTop: '40px'
         }}
       >
-        {products.map((product, index) => (
+        {products.map((product, key) => (
           <ProductCard
-            key={`${product.nome}-${product.marca}-${index}`}
+            key={`${product.nome}-${product.marca}-${key}`}
             nome={product.nome}
             preco={product.preco}
             logo={product.logo}

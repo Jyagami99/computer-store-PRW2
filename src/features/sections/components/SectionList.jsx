@@ -1,5 +1,6 @@
 import { useProducts } from '../../../context/ProductContext';
 import { SECTIONS } from '../../../utils/constants';
+
 import SectionItem from './SectionItem';
 
 const SectionList = () => {

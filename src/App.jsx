@@ -1,5 +1,5 @@
-import { ProductProvider } from './context/ProductContext';
 import Banner from './components/layout/Banner';
+import { ProductProvider } from './context/ProductContext';
 import ProductForm from './features/products/components/ProductForm';
 import SectionList from './features/sections/components/SectionList';
 

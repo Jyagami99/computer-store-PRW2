@@ -1,10 +1,10 @@
-import { useProducts } from '../../../context/ProductContext';
-import { useProductForm } from '../hooks/useProductForm';
-import { Input } from '../../../components/ui/Input';
 import { Button } from '../../../components/ui/Button';
-import { Select } from '../../../components/ui/Select';
-import { BRANDS, getSectionNames } from '../../../utils/constants';
+import { Input } from '../../../components/ui/Input';
 import { RadioGroup } from '../../../components/ui/RadioGroup';
+import { Select } from '../../../components/ui/Select';
+import { useProducts } from '../../../context/ProductContext';
+import { BRANDS, getSectionNames } from '../../../utils/constants';
+import { useProductForm } from '../hooks/useProductForm';
 
 const ProductForm = () => {
   const { addProduct } = useProducts();
