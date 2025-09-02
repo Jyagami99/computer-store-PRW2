@@ -7,11 +7,6 @@ const Banner = () => {
         padding: '80px 20px'
       }}
     >
-      <img
-        src='https://via.placeholder.com/80x80/ffffff/4338ca?text=💻'
-        alt='Logo'
-        style={{ borderRadius: '50%', marginBottom: '20px' }}
-      />
       <h1
         style={{
           fontSize: '48px',
@@ -20,7 +15,7 @@ const Banner = () => {
           textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
         }}
       >
-        TechStore
+        Computer Store
       </h1>
       <h2
         style={{
