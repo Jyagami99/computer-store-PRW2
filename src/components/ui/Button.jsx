@@ -17,13 +17,23 @@ export const Button = ({ children, onClick, variant = 'primary' }) => {
 
   return (
     <div
+      role='button'
       onClick={onClick}
+      onKeyUp={onClick}
       style={styles[variant]}
       onMouseOver={e => {
         e.target.style.backgroundColor = '#3730a3';
         e.target.style.transform = 'translateY(-2px)';
       }}
+      onFocus={e => {
+        e.target.style.backgroundColor = '#3730a3';
+        e.target.style.transform = 'translateY(-2px)';
+      }}
       onMouseOut={e => {
+        e.target.style.backgroundColor = '#4338ca';
+        e.target.style.transform = 'translateY(0)';
+      }}
+      onBlur={e => {
         e.target.style.backgroundColor = '#4338ca';
         e.target.style.transform = 'translateY(0)';
       }}

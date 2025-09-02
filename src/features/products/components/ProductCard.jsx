@@ -50,7 +50,15 @@ const ProductCard = ({ nome, preco, logo, marca, condicao }) => {
         e.currentTarget.style.transform = 'translateY(-8px)';
         e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
       }}
+      onFocus={e => {
+        e.currentTarget.style.transform = 'translateY(-8px)';
+        e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+      }}
       onMouseOut={e => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+      }}
+      onBlur={e => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
       }}
