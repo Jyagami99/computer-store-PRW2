@@ -45,11 +45,13 @@ export const useProductForm = onSubmit => {
     const missingFields = requiredFields.filter(field => !formData[field]);
 
     if (missingFields.length > 0) {
+      /* eslint-disable no-alert */
       alert(`Por favor, preencha todos os campos: ${missingFields.join(', ')}`);
       return;
     }
 
     if (isNaN(parseFloat(formData.preco))) {
+      /* eslint-disable no-alert */
       alert('Por favor, insira um preço válido!');
       return;
     }
