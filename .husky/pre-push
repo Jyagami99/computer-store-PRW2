@@ -1,0 +1,16 @@
+# .husky/pre-push
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 Executando verificações antes do push..."
+
+# Executa todos os lints
+npm run lint
+
+# Verifica formatação
+npm run format:check
+
+# Se você tiver testes, descomente a linha abaixo
+# npm test
+
+echo "✅ Todas as verificações passaram! Push permitido."
