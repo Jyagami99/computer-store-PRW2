@@ -1,4 +1,4 @@
-import ProductCard from '../../products/components/ProductCard';
+import ProductCard from '../../products/components/ProductCard/ProductCard';
 
 const SectionItem = ({ section, products }) => {
   if (products.length === 0) {

@@ -1,44 +1,20 @@
-import { Button } from '../../../components/ui/Button';
-import { Input } from '../../../components/ui/Input';
-import { RadioGroup } from '../../../components/ui/RadioGroup';
-import { Select } from '../../../components/ui/Select';
-import { useProducts } from '../../../context/ProductContext';
-import { BRANDS, getSectionNames } from '../../../utils/constants';
-import { useProductForm } from '../hooks/useProductForm';
+import { Button } from '../../../../components/ui/Button/Button';
+import { Input } from '../../../../components/ui/Input/Input';
+import { RadioGroup } from '../../../../components/ui/RadioGroup/RadioGroup';
+import { Select } from '../../../../components/ui/Select/Select';
+import { useProducts } from '../../../../context/ProductContext';
+import { BRANDS, getSectionNames } from '../../../../utils/constants';
+import { useProductForm } from '../../hooks/useProductForm';
+import styles from './style.module.css';
 
 const ProductForm = () => {
   const { addProduct } = useProducts();
   const { formData, updateField, handleSubmit } = useProductForm(addProduct);
 
   return (
-    <section
-      style={{
-        padding: '80px 20px',
-        backgroundColor: '#f8fafc',
-        display: 'flex',
-        justifyContent: 'center'
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '600px',
-          width: '100%',
-          backgroundColor: 'white',
-          padding: '40px',
-          borderRadius: '16px',
-          boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
-        }}
-      >
-        <h2
-          style={{
-            fontSize: '32px',
-            marginBottom: '32px',
-            textAlign: 'center',
-            color: '#1f2937'
-          }}
-        >
-          Cadastrar Novo Produto
-        </h2>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Cadastrar Novo Produto</h2>
 
         <Input
           label='Nome do Produto'
@@ -81,7 +57,7 @@ const ProductForm = () => {
           onChange={value => updateField('condicao', value)}
         />
 
-        <div style={{ textAlign: 'center' }}>
+        <div className={styles.actions}>
           <Button onClick={handleSubmit}>Cadastrar Produto</Button>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import Banner from './components/layout/Banner';
+import Banner from './components/layout/Banner/Banner';
 import { ProductProvider } from './context/ProductContext';
-import ProductForm from './features/products/components/ProductForm';
+import ProductForm from './features/products/components/ProductForm/ProductForm';
 import SectionList from './features/sections/components/SectionList';
 
 function App() {

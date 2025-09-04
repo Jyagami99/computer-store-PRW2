@@ -28,7 +28,8 @@ export const SECTIONS = [
   }
 ];
 
-export const getSectionNames = () => SECTIONS.map(section => section.nome);
+export const getSectionNames = () =>
+  SECTIONS.map(section => section.nome.replaceAll('|', '').trim());
 
 export const getSectionByName = name =>
   SECTIONS.find(section => section.nome === name);
